@@ -1,32 +1,28 @@
 ---
 dependency:
   name: galaxy
-  options:
-    role-file: molecule/resources/requirements.yml
-  env:
-    ANSIBLE_ROLES_PATH: $HOME/.ansible/roles
 driver:
-  name: vagrant
-  provider:
-    name: virtualbox
+  name: ec2
 lint:
   name: yamllint
 platforms:
   - name: instance
-    box: ${VAGRANT_DEFAULT_BOX:-generic/rhel7}
+    image: ami-000db10762d0c4c05
+    instance_type: t2.micro
+    vpc_subnet_id: subnet-38a38302
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
+  connection_options:
+    ansible_user: ec2-user
   playbooks:
     converge: ../resources/playbooks/converge.yml
     cleanup: ../resources/playbooks/cleanup.yml
-  inventory:
-    host_vars:
-      instance:
-        environment: vagrant
 verifier:
   name: testinfra
+  options:
+    verbose: true
   directory: ../resources/tests/
   lint:
     name: flake8

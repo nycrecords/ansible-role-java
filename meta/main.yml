@@ -1,11 +1,14 @@
 ---
-dependencies: []
+dependencies: 
+  - nycrecords.rhsm
+  - nycrecords.scl
+  - nycrecords.yum_config_manager
 
 galaxy_info:
   role_name: java
-  author: geerlingguy
+  author: joelbcastillo
   description: Java for Linux
-  company: "Midwestern Mac, LLC"
+  company: "City of New York, Department of Records and Information Services"
   license: "license (BSD, MIT)"
   min_ansible_version: 2.4
   platforms:

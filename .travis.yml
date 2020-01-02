@@ -1,33 +1,33 @@
----
 language: python
-services: docker
-
+python:
+- 3.7
 env:
   global:
+    - MOLECULE_DEBUG: 'true'
     - ROLE_NAME: java
-  matrix:
-    - MOLECULE_DISTRO: centos8
-    - MOLECULE_DISTRO: centos7
-    - MOLECULE_DISTRO: centos6
-    - MOLECULE_DISTRO: fedora31
-    - MOLECULE_DISTRO: ubuntu1804
-    - MOLECULE_DISTRO: ubuntu1604
-    - MOLECULE_DISTRO: debian10
-    - MOLECULE_DISTRO: debian9
+    - EC2_REGION: us-east-1
+    - secure: 2hJy3eTgS0qTOIdbTeZwxOH3cLCfzTzKM+q1NxKIC34v9JKcoE+/9jIKZkWIjlPvI3Sd07OJTymGEolHpmcR4le0iGnzYgIfTc75kPPyEy/qbG+7v0dgNKOfC+FRAsL0Aa8XQRHm06HxGCB2HQvfzCj5Mdqe4BYwCp3zv7DowEBcSf4BZ+NRQb4IW9wEla3FtJXtVa0D2JQ6hx2Vmp+yx9tgCtEksxd4IHfNe3nQfDA/6jXmLpplNaZNgTOSJXOzBPGR26uSCslAOX+nIX1hjNjRErQSkVmC67OzR5QDWKENNPLmkKvBPvbl0K6mEQfGk6h2inVypPBIO264uAHGLJ4j48tDNrNPFGaqQO6gMQ9pvlUoEVyLD/5A/5qsAgNqudqEkvrU3ANLg5Yo+ESJv3wRBldQ8P2h03hU9sm1GkVGtUiQ3vcuyaSEmtdemLqC2cv8XQ4bIflArZx7JfnWdCNskqThO9VC3zMKXrriTvVn752alLJfvWa1SgaW+PMRjXGSr4tZvnBWO62JbrMrvqDHPu5cd5E4tf3Xv+OQYyNR+lge6tkALpuaHY1wGzmjDuRjtWC6vtA7aXHu7xL4jKPWUcjnppjlxPh+XstXg5eTyPA/IjvyVnB0rxoiRM/lQTkNMmUX4uuiceFX3pgP4AC6sHN+cAeJIt+owRyBKxM=
+    - secure: i92ZPoGOWJEahLq7XFTH0IfNNMuwvWWUwYqDXXPz0iewCyyAIfGSUJQLml/+3NInyttVknZ2f3MFBKa9g8FnfEJrrb1pMuWfOl8SRgHwARAtaNPSx+RKKd2+fIHdPECA/96QBFr4rxQtsTC6tjibOos5ciNlYfcevMMftOuMr6vDuPf1r0goui9UYqOa259FwZ4ucFzi3myRW6HkAl5uvl++GVpiwT0yFALAackG5i9A5sJtaAcrQsSmcGdbtdMo3C/TzHXCvala1+9zhOMchs/I8VvLiqGqy0hzk6w8D9D6i/5hEwI3OzX+GXpuU0+B+YMvbzLZI25W95cz/yatOnokL5aQEsTHq9ankioWMymziEOdi/KDVfBJVu51FBYeTKjpY02tc9/z2tTtrveoVWcV2A5FSgKyuyyCpTrLmSRxZFzZxZrF94nHLyCTlEJILkZLlXmkdT5FGJKDCFOGmsvoJsmPTYhpw8kcKrY4cmmboNth5keXiDj565fNVt4ZENapiWGv8++AgdObB0lP1MPjsX1nPhXqXwBZmoEEyl9mdWpU39W8QBLKDt1vImrCN3CJWxHzFgg+cBiJJqbDKJKYCrpc88bGMaJ0cOi3vF8el4nCpjSHc1Zkb0UJyxgoj2iNpbhAsbg3RlnzltmDd65WvbldZiIaRqKrgoSHLCo=
+    - secure: hYPfJexiYfSOeCejS6m1aFRN6MRpKktFQhbAAjzQ1tDwQPi+oq4suKv/iMlDTab+TrAqQJeUgFDiLBrFQP1y66TLSDgWdGy+pUBcfTknUl/7yfwnJ8cRc4AecAGeNryOruy1vTI4fyTs59H08h9pRx09hCh/EqQ5FQuRWHiQWIRsdyr72WSzaVfWKGonce3fhbCePRwVsxC3KCJsD7HV72+WLOorcIUXamN3KLnN2a/IcRzKl/NQ+rLIfSLKKW85XAhPAUxLQyP6Jp+evIkUudGkNTIzpPJt8qXs7sZLUE0neyo9zsQz0TvXy5LmhYJnGVmyrRxhkkcHzx1ffkhh/nUcUDlVo/JhmYolAl4fDBUs/LPS9nWJLT54Go0fwRFupq5YLjkw35qQBaxSBfuThTUYAnhQihTsOtU+Cm5qsjc5JDS+I+XsXCwfh1gUMLJ2485SIPkiVfihhtHbfxuiswA4UJ6y9ytGfQeCwdlEikdPhmNnZV0O4BwQs/wFQGiSwmcyijbTUfnxFB+YgaIUfTeu76OCPG/vhN2uXMh1vdInj7BYHaNqWWsrDWaPa8uG9b3gmGeQ+NcsdDke/0iuwjgWbElnK9J/t7Gsgrv2rO0onKF2xJQC7neJHffp7HdIpOWtEm4NqpYWLtRgvcCX8p/LyhmOwgkLmg1ySbzmlIQ=
+    - secure: Trb6OnN3gG9Ttg+o+9kYVNo4ZGmuJ/f4wjT0ncGHrSlhACndGGV+wpJ3i0D2htbdj1ZaXUosCzVtpvwRnxg/UJcnr69nyL8y2JV8vCDJUfvuY6m6VLpENh4uNG56SjniU34BA0Lmjq8ZnnI/Yiui1eawSj0+9OKaL1zUgZ0PsRBevY+F90oe9wFimqiuFhr/gPDhLacu/wc5FtcBxBdhDGpXyTG4R0wqEhlOqQUAKdnFfti3HqqGx0MEwVYb4UkSRBmbneTOtnAgIGGLIgBIP9L4ovXAc641YuUtbw+XglfvgwqMxH37a+2QS7W94Ys3H5aQrntLbemdUiEM8yLZCvY3vSBABTQXkHZIRsafTBBma1J2L3kNfhuDQ4Pdk2ktLaQXeopKdGlM2Srw2rUXbWcfTqBEf7sVe2dd3b/eZ99iqt3iA7YqyMyJaWo0dhdsh4t2UKBJMd7zBtK/0XCCtGatbHB9BHEatrwTetJPWPY15/SIRX/hBRcv8UwTvK42iVIfRm7lTrctdq0rrG3/hqOZ4ozCqobPqmAd9Z0SeHKlBBV+RPep0BWZ0raz5xo6Om573+/8ifY5WFbjEXasm2dTJxAqjGuMs+NaZ23n/fiC6I7uwp2qqdNYR1G11qRFGfd88MKIYc+cKfO2K0LJgLQCLwesMWO62kU7rJ3uDWE=
 
 install:
-  # Install test dependencies.
-  - pip install molecule docker
-
-before_script:
-  # Use actual Ansible Galaxy role name for the project directory.
-  - cd ../
-  - mv ansible-role-$ROLE_NAME geerlingguy.$ROLE_NAME
-  - cd geerlingguy.$ROLE_NAME
+  - pip install pipenv
+  - pipenv install
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY
+  - aws configure set aws_secret_access_key $AWS_SECRET_KEY
+  - aws configure set default.region $EC2_REGION
+  - aws configure list
+  - |-
+    printf '[defaults]
+    roles_path = ../' > ansible.cfg
+  - pipenv run ansible-galaxy install -r requirements.yml
 
 script:
-  # Run tests.
-  - molecule test
+  - molecule create --scenario-name aws
+  - molecule converge --scenario-name aws
+  - molecule verify --scenario-name aws
+  - molecule destroy --scenario-name aws
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/

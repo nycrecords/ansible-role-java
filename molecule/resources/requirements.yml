@@ -1,0 +1,7 @@
+---
+- src: nycrecords.yum_config_manager
+  version: master
+- src: nycrecords.rhsm
+  version: master
+- src: nycrecords.scl
+  version: master
