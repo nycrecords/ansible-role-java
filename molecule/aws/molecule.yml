@@ -1,6 +1,10 @@
 ---
 dependency:
   name: galaxy
+  options:
+    role-file: molecule/resources/requirements.yml
+  env:
+    ANSIBLE_ROLES_PATH: $HOME/.ansible/roles
 driver:
   name: ec2
 lint:
