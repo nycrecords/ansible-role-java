@@ -25,7 +25,7 @@
 
   roles:
     - role: nycrecords.yum_config_manager
-      when: "molecule_yml.driver.name == 'ec2'"
+      when: molecule_yml.driver.name == "ec2"
     - role: nycrecords.rhsm
-      when: "molecule_yml.driver.name == 'vagrant'"
+      when: molecule_yml.driver.name == "vagrant"
     - role: ansible-role-java

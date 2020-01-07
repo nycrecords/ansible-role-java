@@ -1,6 +1,11 @@
-# Ansible Role: Java
 
+![GitHub](https://img.shields.io/github/license/nycrecords/ansible-role-java)
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-java.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-java)
+[![Galaxy](https://img.shields.io/badge/galaxy-nycrecords.java-blue.svg)](https://galaxy.ansible.com/nycrecords/java)
+![Ansible](https://img.shields.io/ansible/role/d/45553)
+![Ansible](https://img.shields.io/ansible/quality/45553)
+
+# Ansible Role: Java
 
 Installs Java for RedHat/CentOS and Debian/Ubuntu linux servers.
 
@@ -64,4 +69,6 @@ MIT / BSD
 
 ## Author Information
 
-This role was created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+This role was originally created in 2014 by [Jeff Geerling](https://www.jeffgeerling.com/), author of [Ansible for DevOps](https://www.ansiblefordevops.com/).
+
+Modified by [Joel Castillo](https://github.com/joelbcastillo) for the [NYC Department of Records and Information Services](https://github.com/nycrecords).
