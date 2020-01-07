@@ -1,7 +1,6 @@
 ---
 dependencies: 
   - nycrecords.rhsm
-  - nycrecords.scl
   - nycrecords.yum_config_manager
 
 galaxy_info:
