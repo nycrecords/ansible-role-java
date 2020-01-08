@@ -1,7 +1,5 @@
 ---
-dependencies: 
-  - nycrecords.rhsm
-  - nycrecords.yum_config_manager
+dependencies: []
 
 galaxy_info:
   role_name: java
