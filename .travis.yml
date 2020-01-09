@@ -1,9 +1,10 @@
+---
 language: python
 python:
-- 3.7
+  - 3.7
 env:
   global:
-    - MOLECULE_DEBUG: 'true'
+    - MOLECULE_DEBUG: "true"
     - ROLE_NAME: java
     - EC2_REGION: us-east-1
     - secure: 2hJy3eTgS0qTOIdbTeZwxOH3cLCfzTzKM+q1NxKIC34v9JKcoE+/9jIKZkWIjlPvI3Sd07OJTymGEolHpmcR4le0iGnzYgIfTc75kPPyEy/qbG+7v0dgNKOfC+FRAsL0Aa8XQRHm06HxGCB2HQvfzCj5Mdqe4BYwCp3zv7DowEBcSf4BZ+NRQb4IW9wEla3FtJXtVa0D2JQ6hx2Vmp+yx9tgCtEksxd4IHfNe3nQfDA/6jXmLpplNaZNgTOSJXOzBPGR26uSCslAOX+nIX1hjNjRErQSkVmC67OzR5QDWKENNPLmkKvBPvbl0K6mEQfGk6h2inVypPBIO264uAHGLJ4j48tDNrNPFGaqQO6gMQ9pvlUoEVyLD/5A/5qsAgNqudqEkvrU3ANLg5Yo+ESJv3wRBldQ8P2h03hU9sm1GkVGtUiQ3vcuyaSEmtdemLqC2cv8XQ4bIflArZx7JfnWdCNskqThO9VC3zMKXrriTvVn752alLJfvWa1SgaW+PMRjXGSr4tZvnBWO62JbrMrvqDHPu5cd5E4tf3Xv+OQYyNR+lge6tkALpuaHY1wGzmjDuRjtWC6vtA7aXHu7xL4jKPWUcjnppjlxPh+XstXg5eTyPA/IjvyVnB0rxoiRM/lQTkNMmUX4uuiceFX3pgP4AC6sHN+cAeJIt+owRyBKxM=
@@ -13,7 +14,8 @@ env:
 install:
   # Python Configuration
   - pip install pipenv
-  - pipenv install
+  - pipenv install --keep-outdated
+  - pipenv graph
 
   # AWS Configuration
   - aws configure set aws_access_key_id $AWS_ACCESS_KEY

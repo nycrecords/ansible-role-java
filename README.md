@@ -1,9 +1,9 @@
 
 ![GitHub](https://img.shields.io/github/license/nycrecords/ansible-role-java)
-[![Build Status](https://travis-ci.org/geerlingguy/ansible-role-java.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-java)
+[![Build Status](https://travis-ci.com/nycrecords/ansible-role-java.svg?branch=master)](https://travis-ci.org/nycrecords/ansible-role-java)
 [![Galaxy](https://img.shields.io/badge/galaxy-nycrecords.java-blue.svg)](https://galaxy.ansible.com/nycrecords/java)
-![Ansible](https://img.shields.io/ansible/role/d/45553)
-![Ansible](https://img.shields.io/ansible/quality/45553)
+![Ansible](https://img.shields.io/ansible/role/d/45597)
+![Ansible](https://img.shields.io/ansible/quality/45597)
 
 # Ansible Role: Java
 
