@@ -25,7 +25,7 @@
         to_port: 0
         cidr_ip: '0.0.0.0/0'
 
-    keypair_name: molecule_key
+    keypair_name: ansible_role_java_molecule_key
     keypair_path: "{{ lookup('env', 'MOLECULE_EPHEMERAL_DIRECTORY') }}/ssh_key"
   tasks:
     - name: Create security group
@@ -74,6 +74,7 @@
         exact_count: 1
         count_tag:
           instance: "{{ item.name }}"
+          Name: "ansible-role-java"
       register: server
       with_items: "{{ molecule_yml.platforms }}"
       async: 7200
